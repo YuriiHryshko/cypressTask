@@ -19,9 +19,8 @@ jobs:
         node-version: '20'
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Run Cypress tests and upload Cypress test results to Dashboard
-      run: npx cypress run --record --key 69da5b99-7257-40ce-86a5-5ae0a535c01b
-      env:
-        CYPRESS_browser: chrome
+      run: npm run test-and-upload
+
