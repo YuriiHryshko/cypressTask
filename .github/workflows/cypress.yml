@@ -1,0 +1,29 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Cypress tests
+      run: npx cypress run
+
+    - name: Upload Cypress test results to Dashboard
+      #if: success()
+      run: npx cypress run --record --key 69da5b99-7257-40ce-86a5-5ae0a535c01b
