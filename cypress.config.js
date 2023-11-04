@@ -5,5 +5,4 @@ module.exports = defineConfig({
     e2e: {
         baseUrl: "https://demo.realworld.io/#/",
     },
-    browser: "chrome",
 });
