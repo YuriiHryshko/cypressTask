@@ -29,31 +29,31 @@ describe('Settings Tests', () => {
         mainPage.elements.signUpLink().should('be.visible');
     });
 
-    // it('Valid changing the username', () => {
-    //     mainPage.clickSettingsLink();
-    //     cy.url().should('include', '/settings');
+    it('Valid changing the username', () => {
+        mainPage.clickSettingsLink();
+        cy.url().should('include', '/settings');
 
-    //     settingsPage.clearUserNameField();
-    //     settingsPage.elements.userNameField().should('eq', '');
+        settingsPage.clearUserNameField();
+        settingsPage.elements.userNameField().should('eq', '');
 
-    //     settingsPage.enterUserName(newRandomUserName);
-    //     settingsPage.elements.userNameField().should('have.value', newRandomUserName);
+        settingsPage.enterUserName(newRandomUserName);
+        settingsPage.elements.userNameField().should('have.value', newRandomUserName);
 
-    //     settingsPage.clickUpdateButton();
-    //     profilePage.elements.userNameElement().should('eq', newRandomUserName);
-    // });
+        settingsPage.clickUpdateButton();
+        profilePage.elements.userNameElement().should('eq', newRandomUserName);
+    });
 
-    // it('Valid changing the bio', () => {
-    //     mainPage.clickSettingsLink();
-    //     cy.url().should('include', '/settings');
+    it('Valid changing the bio', () => {
+        mainPage.clickSettingsLink();
+        cy.url().should('include', '/settings');
 
-    //     settingsPage.clearBioField();
-    //     settingsPage.elements.bioField().should('eq', '');
+        settingsPage.clearBioField();
+        settingsPage.elements.bioField().should('eq', '');
 
-    //     settingsPage.enterBio(newRandomBio);
-    //     settingsPage.elements.bioField().should('have.value', newRandomBio);
+        settingsPage.enterBio(newRandomBio);
+        settingsPage.elements.bioField().should('have.value', newRandomBio);
 
-    //     settingsPage.clickUpdateButton();
-    //     profilePage.elements.bioElement().should('eq', newRandomBio);
-    // });
+        settingsPage.clickUpdateButton();
+        profilePage.elements.bioElement().should('eq', newRandomBio);
+    });
 });
