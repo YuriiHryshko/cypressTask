@@ -22,5 +22,9 @@ jobs:
       run: npm ci
 
     - name: Run Cypress tests and upload Cypress test results to Dashboard
+<<<<<<< HEAD
       run: npm run test-and-upload
 
+=======
+      run: npx cypress run --record --key 69da5b99-7257-40ce-86a5-5ae0a535c01b --browser chrome
+>>>>>>> beaada77e54e855621a4301c1ccaebef01b5ced8
